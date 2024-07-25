@@ -1,0 +1,579 @@
+<!doctype html>
+<html>
+<head>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <title>Contact: Total Clean!!</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  
+ 
+     <style type="text/css">
+		select {width: 20em;}
+	     -webkit-text-size-adjust: 100%;
+		--wysiwyg-image-spacing: 1.5em;
+		--wysiwyg-inline-image-spacing: calc(var(--wysiwyg-image-spacing) / 2);		
+		font-family: 'Barlow', Arial;
+		font-size: 18px;
+		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		text-decoration: none;
+		box-sizing: border-box;
+		background-color: #fff;
+		color: #333;
+		cursor: pointer;
+		display: inline-block;
+		margin: 0;
+		min-width: 150px;
+		overflow: hidden;
+		position: relative;
+		text-overflow: ellipsis;
+		z-index: 1;
+		width: 100%;
+		white-space: nowrap;
+		border: 1px solid #ddd;
+		box-shadow: none;
+		padding: 0 15px 0 10px;
+		border-radius: 4px;
+		height: 40px;
+		line-height: 40px;
+		outline: none;
+		vertical-align: middle;
+		max-width: 100%;
+        .form {
+		  max-width: 650px;
+		}
+
+		.form-field ~ .form-field {
+		  margin-top: 25px;
+		}
+
+		.form-field label {
+		  display: block;
+		  font-size: 13px;
+		  margin-bottom: 5px;
+		}
+
+		.form-field input {
+		  border: 1px solid #ddd;
+		  border-radius: 4px;
+		  padding: 10px;
+		  width: 100%;
+		}
+
+		.form-field input:focus {
+		  border: 1px solid rgba(0, 150, 64, 1);
+		}
+
+		.form-field input[type='text'] {
+		  border: 1px solid #ddd;
+		  border-radius: 4px;
+		}
+
+		.form-field input[type='text']:focus {
+		  border: 1px solid rgba(0, 150, 64, 1);
+		}
+
+		.form-field input[type='checkbox'] {
+		  width: auto;
+		}
+
+		.form-field .nesty-input {
+		  border-radius: 4px;
+		  height: 40px;
+		  line-height: 40px;
+		  outline: none;
+		  vertical-align: middle;
+		}
+
+		.form-field .nesty-input:focus {
+		  border: 1px solid rgba(0, 150, 64, 1);
+		  text-decoration: none;
+		}
+
+		.form-field .hc-multiselect-toggle:focus {
+		  outline: none;
+		  border: 1px solid rgba(0, 150, 64, 1);
+		  text-decoration: none;
+		}
+
+		.form-field textarea {
+		  vertical-align: middle;
+		  border: 1px solid #ddd;
+		  border-radius: 4px;
+		  padding: 10px;
+		  width: 100%;
+		  
+		}
+
+		.form-field input[type='checkbox'] + label {
+		  margin: 0 0 0 10px;
+		}
+
+		.form-field .optional {
+		  color: #333;
+		  margin-left: 4px;
+		}
+
+		.form-field p {
+		  color: #333;
+		  font-size: 12px;
+		  margin: 5px 0;
+		}
+
+		.form footer {
+		  margin-top: 40px;
+		  padding-top: 30px;
+		}
+
+		.form footer a {
+		  color: #333;
+		  cursor: pointer;
+		  margin-right: 15px;
+		}
+
+		.form .suggestion-list {
+		  font-size: 13px;
+		  margin-top: 30px;
+		}
+
+		.form .suggestion-list label {
+		  border-bottom: 1px solid #ddd;
+		  display: block;
+		  padding-bottom: 5px;
+		}
+
+		.form .suggestion-list li {
+		  padding: 10px 0;
+		}
+
+		.form .suggestion-list li a:visited {
+		  color: rgba(0, 150, 64, 1);
+		}
+
+		.contact-form {
+		  margin-bottom: 3rem;
+		}
+	    .container {
+			padding: 0;
+			width: 70%;
+		}
+	    .center-block {
+		  margin: auto;
+		  display: block;
+		}
+		
+		select {
+
+			  /* styling */
+			  background-color: white;
+			  border: thin solid #ddd;
+			  border-radius: 4px;
+			  display: inline-block;
+			  font: inherit;
+			  line-height: 1.5em;
+			  padding: 0.5em 3.5em 0.5em 1em;
+
+			  /* reset */
+
+			  margin: 0;      
+			  -webkit-box-sizing: border-box;
+			  -moz-box-sizing: border-box;
+			  box-sizing: border-box;
+			  -webkit-appearance: none;
+			  -moz-appearance: none;
+			}
+
+		select.minimal {
+		  background-image:
+			linear-gradient(45deg, transparent 50%, gray 50%),
+			linear-gradient(135deg, gray 50%, transparent 50%),
+			linear-gradient(to right, #ccc, #ccc);
+		  background-position:
+			calc(100% - 20px) calc(1em + 2px),
+			calc(100% - 15px) calc(1em + 2px),
+			calc(100% - 2.5em) 0.5em;
+		  background-size:
+			5px 5px,
+			5px 5px,
+			1px 1.5em;
+		  background-repeat: no-repeat;
+		}
+
+		select.minimal:focus {
+		  background-image:
+			linear-gradient(45deg, green 50%, transparent 50%),
+			linear-gradient(135deg, transparent 50%, green 50%),
+			linear-gradient(to right, #ccc, #ccc);
+		  background-position:
+			calc(100% - 15px) 1em,
+			calc(100% - 20px) 1em,
+			calc(100% - 2.5em) 0.5em;
+		  background-size:
+			5px 5px,
+			5px 5px,
+			1px 1.5em;
+		  background-repeat: no-repeat;
+		  border-color: green;
+		  outline: 0;
+		}
+
+
+		select:-moz-focusring {
+		  color: transparent;
+		  text-shadow: 0 0 0 #000;
+		}		
+    </style>
+
+	<script>
+		var style = document.createElement('style');
+		style.setAttribute("id","multiselect_dropdown_styles");
+		style.innerHTML = `
+		.multiselect-dropdown{
+		  display: inline-block;
+		  padding: 2px 5px 0px 5px;
+		  border-radius: 4px;
+		  border: solid 1px #ced4da;
+		  background-color: white;
+		  position: relative;
+		  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+		  background-repeat: no-repeat;
+		  background-position: right .75rem center;
+		  background-size: 16px 12px;
+		}
+		.multiselect-dropdown span.optext, .multiselect-dropdown span.placeholder{
+		  margin-right:0.5em; 
+		  margin-bottom:2px;
+		  padding:1px 0; 
+		  border-radius: 4px; 
+		  display:inline-block;
+		}
+		.multiselect-dropdown span.optext{
+		  background-color:lightgray;
+		  padding:1px 0.75em; 
+		}
+		.multiselect-dropdown span.optext .optdel {
+		  float: right;
+		  margin: 0 -6px 1px 5px;
+		  font-size: 0.7em;
+		  margin-top: 2px;
+		  cursor: pointer;
+		  color: #666;
+		}
+		.multiselect-dropdown span.optext .optdel:hover { color: #c66;}
+		.multiselect-dropdown span.placeholder{
+		  color:#ced4da;
+		}
+		.multiselect-dropdown-list-wrapper{
+		  box-shadow: gray 0 3px 8px;
+		  z-index: 100;
+		  padding:2px;
+		  border-radius: 4px;
+		  border: solid 1px #ced4da;
+		  display: none;
+		  margin: -1px;
+		  position: absolute;
+		  top:0;
+		  left: 0;
+		  right: 0;
+		  background: white;
+		}
+		.multiselect-dropdown-list-wrapper .multiselect-dropdown-search{
+		  margin-bottom:5px;
+		}
+		.multiselect-dropdown-list{
+		  padding:2px;
+		  height: 15rem;
+		  overflow-y:auto;
+		  overflow-x: hidden;
+		}
+		.multiselect-dropdown-list::-webkit-scrollbar {
+		  width: 6px;
+		}
+		.multiselect-dropdown-list::-webkit-scrollbar-thumb {
+		  background-color: #bec4ca;
+		  border-radius:3px;
+		}
+
+		.multiselect-dropdown-list div{
+		  padding: 5px;
+		}
+		.multiselect-dropdown-list input{
+		  height: 1.15em;
+		  width: 1.15em;
+		  margin-right: 0.35em;  
+		}
+		.multiselect-dropdown-list div.checked{
+		}
+		.multiselect-dropdown-list div:hover{
+		  background-color: #ced4da;
+		}
+		.multiselect-dropdown span.maxselected {width:100%;}
+		.multiselect-dropdown-all-selector {border-bottom:solid 1px #999;}
+		`;
+		document.head.appendChild(style);
+
+		function MultiselectDropdown(options){
+			  var config={
+				search:true,
+				height:'15rem',
+				placeholder:'select',
+				txtSelected:'selected',
+				txtAll:'All',
+				txtRemove: 'Remove',
+				txtSearch:'search',
+				...options
+			  };
+			  function newEl(tag,attrs){
+				var e=document.createElement(tag);
+				if(attrs!==undefined) Object.keys(attrs).forEach(k=>{
+				  if(k==='class') { Array.isArray(attrs[k]) ? attrs[k].forEach(o=>o!==''?e.classList.add(o):0) : (attrs[k]!==''?e.classList.add(attrs[k]):0)}
+				  else if(k==='style'){  
+					Object.keys(attrs[k]).forEach(ks=>{
+					  e.style[ks]=attrs[k][ks];
+					});
+				   }
+				  else if(k==='text'){attrs[k]===''?e.innerHTML='&nbsp;':e.innerText=attrs[k]}
+				  else e[k]=attrs[k];
+				});
+				return e;
+			  }
+
+			  
+			  document.querySelectorAll("select[multiple]").forEach((el,k)=>{
+				
+				var div=newEl('div',{class:'multiselect-dropdown',style:{width:config.style?.width??el.clientWidth+'px',padding:config.style?.padding??''}});
+				el.style.display='none';
+				el.parentNode.insertBefore(div,el.nextSibling);
+				var listWrap=newEl('div',{class:'multiselect-dropdown-list-wrapper'});
+				var list=newEl('div',{class:'multiselect-dropdown-list',style:{height:config.height}});
+				var search=newEl('input',{class:['multiselect-dropdown-search'].concat([config.searchInput?.class??'form-control']),style:{width:'100%',display:el.attributes['multiselect-search']?.value==='true'?'block':'none'},placeholder:config.txtSearch});
+				listWrap.appendChild(search);
+				div.appendChild(listWrap);
+				listWrap.appendChild(list);
+
+				el.loadOptions=()=>{
+				  list.innerHTML='';
+				  
+				  if(el.attributes['multiselect-select-all']?.value=='true'){
+					var op=newEl('div',{class:'multiselect-dropdown-all-selector'})
+					var ic=newEl('input',{type:'checkbox'});
+					op.appendChild(ic);
+					op.appendChild(newEl('label',{text:config.txtAll}));
+			  
+					op.addEventListener('click',()=>{
+					  op.classList.toggle('checked');
+					  op.querySelector("input").checked=!op.querySelector("input").checked;
+					  
+					  var ch=op.querySelector("input").checked;
+					  list.querySelectorAll(":scope > div:not(.multiselect-dropdown-all-selector)")
+						.forEach(i=>{if(i.style.display!=='none'){i.querySelector("input").checked=ch; i.optEl.selected=ch}});
+			  
+					  el.dispatchEvent(new Event('change'));
+					});
+					ic.addEventListener('click',(ev)=>{
+					  ic.checked=!ic.checked;
+					});
+					el.addEventListener('change', (ev)=>{
+					  let itms=Array.from(list.querySelectorAll(":scope > div:not(.multiselect-dropdown-all-selector)")).filter(e=>e.style.display!=='none')
+					  let existsNotSelected=itms.find(i=>!i.querySelector("input").checked);
+					  if(ic.checked && existsNotSelected) ic.checked=false;
+					  else if(ic.checked==false && existsNotSelected===undefined) ic.checked=true;
+					});
+			  
+					list.appendChild(op);
+				  }
+
+				  Array.from(el.options).map(o=>{
+					var op=newEl('div',{class:o.selected?'checked':'',optEl:o})
+					var ic=newEl('input',{type:'checkbox',checked:o.selected});
+					op.appendChild(ic);
+					op.appendChild(newEl('label',{text:o.text}));
+
+					op.addEventListener('click',()=>{
+					  op.classList.toggle('checked');
+					  op.querySelector("input").checked=!op.querySelector("input").checked;
+					  op.optEl.selected=!!!op.optEl.selected;
+					  el.dispatchEvent(new Event('change'));
+					});
+					ic.addEventListener('click',(ev)=>{
+					  ic.checked=!ic.checked;
+					});
+					o.listitemEl=op;
+					list.appendChild(op);
+				  });
+				  div.listEl=listWrap;
+
+				  div.refresh=()=>{
+					div.querySelectorAll('span.optext, span.placeholder').forEach(t=>div.removeChild(t));
+					var sels=Array.from(el.selectedOptions);
+					if(sels.length>(el.attributes['multiselect-max-items']?.value??5)){
+					  div.appendChild(newEl('span',{class:['optext','maxselected'],text:sels.length+' '+config.txtSelected}));          
+					}
+					else{
+					  sels.map(x=>{
+						var c=newEl('span',{class:'optext',text:x.text, srcOption: x});
+						if((el.attributes['multiselect-hide-x']?.value !== 'true'))
+						  c.appendChild(newEl('span',{class:'optdel',text:'🗙',title:config.txtRemove, onclick:(ev)=>{c.srcOption.listitemEl.dispatchEvent(new Event('click'));div.refresh();ev.stopPropagation();}}));
+
+						div.appendChild(c);
+					  });
+					}
+					if(0==el.selectedOptions.length) div.appendChild(newEl('span',{class:'placeholder',text:el.attributes['placeholder']?.value??config.placeholder}));
+				  };
+				  div.refresh();
+				}
+				el.loadOptions();
+				
+				search.addEventListener('input',()=>{
+				  list.querySelectorAll(":scope div:not(.multiselect-dropdown-all-selector)").forEach(d=>{
+					var txt=d.querySelector("label").innerText.toUpperCase();
+					d.style.display=txt.includes(search.value.toUpperCase())?'block':'none';
+				  });
+				});
+
+				div.addEventListener('click',()=>{
+				  div.listEl.style.display='block';
+				  search.focus();
+				  search.select();
+				});
+				
+				document.addEventListener('click', function(event) {
+				  if (!div.contains(event.target)) {
+					listWrap.style.display='none';
+					div.refresh();
+				  }
+				});    
+			  });
+			}
+
+			window.addEventListener('load',()=>{
+			  MultiselectDropdown(window.MultiselectDropdownOptions);
+			});
+			
+			
+			function locationSelection(){
+			
+				var elem = document.querySelector("#field2").selectedOptions;
+					var arr = [].slice.call(elem);
+					var genres = arr.map(function(el){
+						return el.value;
+					}).join(';');
+					//window.alert(genres);
+					console.log(genres);
+					document.getElementById("00NEm000005hZ7h").value=genres; 
+			}
+			
+	</script>
+
+</head>
+	<body>
+	<div>
+		 <br />
+		 <div>
+		 <img alt="Pearl" src="file:///C:/Users/thomas.white/Documents/Salesforce/Heniff/Total%20Clean/TotalCleanImageHeader.PNG"   />
+		 </div>
+		 <hr color="gray" />
+	 </div>
+		<!--  ----------------------------------------------------------------------  -->
+		<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+		<!--  If necessary, please modify the charset parameter to specify the        -->
+		<!--  character set of your HTML page.                                        -->
+		<!--  ----------------------------------------------------------------------  -->
+
+		<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+		<!--  ----------------------------------------------------------------------  -->
+		<!--  NOTE: Please add the following <FORM> element to your page.             -->
+		<!--  ----------------------------------------------------------------------  -->
+
+		<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DEm0000006tEj" method="POST">
+
+		
+		<input type=hidden name="oid" value="00DEm0000006tEj" />
+		<input type=hidden name="recordType" id="recordType" value="012Em000001MRDtIAO" />
+		<input type=hidden name="retURL" value="https://www.heniff.com/contact-us" />
+		<input type=hidden id="00NEm000005hZ7h" name="00NEm000005hZ7h" type="text" />
+		<input type=hidden  id="00NEm000005sAlB" name="00NEm000005sAlB" type="checkbox" value="1" checked />
+		
+
+		<!--  ----------------------------------------------------------------------  -->
+		<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+		<!--  these lines if you wish to test in debug mode.                          -->
+		<!--  <input type="hidden" name="debug" value=1>                              -->
+		<!--  <input type="hidden" name="debugEmail"                                  -->
+		<!--  value="thomas.white@keyrus.us">                                         -->
+		<!--  ----------------------------------------------------------------------  -->
+			
+			<div class="container">
+				<div style="font-size: 4rem;">
+					Contact Us
+					<br />
+					<br />
+				</div>
+				<div class="form contact-form">
+					<div class="form-field">
+						<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" Required /><br>
+					</div>
+					<div class="form-field">
+						<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" Required /><br>
+					</div>
+					<div class="form-field">
+						<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" Required /><br>
+					</div>
+					<div class="form-field">
+						<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" Required /><br>
+					</div>
+					<div class="form-field">
+						<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" Required /><br>
+					</div>
+					<div class="form-field">
+						<label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" Required /><br>
+					</div>
+					
+					
+
+					<hr/>
+					
+						<label>Tank Wash</label>
+						<br />						
+						<select required name="field2"  id="field2" multiple multiselect-search="true" multiselect-select-all="true" multiselect-max-items="3" onchange="locationSelection()">
+						  <option value="a2XEm000000NnLqMAK">0430 - Prichard, AL</option>
+						  <option value="a2XEm000000NnM3MAK">12730 - Pasadena, TX</option>
+						  <option value="a2XEm000000NnOOMA0">13930 - Dallas, TX</option>
+						  <option value="a2XEm000000NnOPMA0">14230 - Arlington, TX</option>
+						  <option value="a2XEm000000NnM0MAK">21730 - Waxahachie, TX</option>
+						  <option value="a2XEm000000NnM2MAK">2730 - Channelview, TX</option>
+						  <option value="a2XEm000000NnLuMAK">4330 - Baton Rouge, LA</option>
+						  <option value="a2XEm000000NnLyMAK">4530 - Lake Charles, LA</option>
+						  
+						</select>
+					
+					 
+					<br />
+					<br />
+					<input type="hidden"  id="external" name="external" value="1" /><br>
+					<div class="center-block">
+						<input type="submit" name="submit">
+					</div>
+						<br />
+					<br />	<br />
+					<br />	<br />
+					<br />	<br />
+					<br />	<br />
+					<br />
+				</div>
+			</div>
+		</form>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+	</body>
+
+
+</html>
